@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <section class="flex gap-4 text-white mt-20 p-4">
+        <div class="card bg-orange-600 p-6 text-2xl font-bold">
+            <p>Cupon Code: <span>2345FD</span></p>
+            <p class="text-3xl font-bold">50% Discount</p>
+        </div>
+        <div class="card bg-orange-600 p-6 text-2xl font-bold">
+            <p>Cupon Code: <span>AUH2255</span></p>
+            <p class="text-3xl font-bold">70% Discount</p>
+        </div>
+        <div class="card bg-orange-600 p-6 text-2xl font-bold">
+            <p>Cupon Code: <span>F255P9</span></p>
+            <p class="text-3xl font-bold">30% Discount</p>
+        </div>
+    </section>
+    <section>
+        <h1 class="text-4xl p-4">Online Tickets</h1>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
+            <div class="grid justify-end p-3 col-span-2">
+                <button class="py-4 px-6 sm:px-12 col-span-1 bg-green-400 rounded-md text-white text-2xl font-bold">Driver</button>
+            </div>
+            <div class="flex justify-between col-span-2 border-r-2 pr-2">
+                <div class="buttons grid grid-cols-2 gap-2 sm:gap-4 text-white">
+                    <button>A1</button><button>A2</button><button>B1</button><button>B2</button><button>C1</button><button>C2</button><button>D1</button><button>D2</button><button>E1</button><button>E2</button><button>F1</button><button>F2</button><button>G1</button><button>G2</button>
+                </div>
+                <div class="buttons grid grid-cols-2 gap-2 sm:gap-4 text-white">
+                    <button>A3</button><button>A4</button><button>B3</button><button>B4</button><button>C3</button><button>C4</button><button>D3</button><button>D4</button><button>E3</button><button>E4</button><button>F3</button><button>F4</button><button>G3</button><button>G4</button>
+                </div>
+            </div>
+            <div class="flex flex-col col-span-2 md:col-span-1 bg-slate-400 p-4 rounded-md">
+                <div class="flex justify-between text-xl font-bold p-2 md:px-4 py-2 text-black border-b-2">
+                    <p>Seat</p>
+                    <p>Class</p>
+                    <p>Price</p>
+                </div>
+                <div class="ticket h-52 overflow-auto flex flex-col">
+                    <!-- <div class="flex justify-between p-2">
+                        <p class="p-1"></p>
+                        <p class="p-1"></p>
+                        <p class="p-1"></p>
+                    </div> -->
+                </div>
+                <div class="text-black text-md font-bold flex justify-between p-2 border-b-2">
+                    <p>Total Price</p>
+                    <div class="flex">
+                        <span>BDT:</span>
+                        <span id="total-amount">00</span>
+                    </div>
+                </div>
+
+                <div class="mt-4 text-white relative cupon-main">
+                    <input id="cuponValue" class="w-full h-10 rounded-md pl-4 outline-none" type="text">
+                    <button id="apply-btn" class="bg-green-500 px-4 py-1 absolute top-1 right-1 rounded-md">Apply</button>
+                </div>
+
+                <div class="discount-container hidden justify-between mt-2 text-black text-md font-bold p-2 border-b-2">
+                    <p>Discount Price</p>
+                    <div class="flex">
+                        <p>BDT:</p>
+                        <p id="discount-price">00</p>
+                    </div>
+                    
+                </div>
+                <div class="mt-2 flex justify-end">
+                    <button class="btn btn-warning reset-btn">Reset</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
